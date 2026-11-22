@@ -32,31 +32,12 @@ export function Shell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-30 border-b border-border/80 bg-background/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <div className="flex items-center gap-6">
-            <Link to="/" className="group flex items-center gap-2.5 transition">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-card border border-border shadow-inner group-hover:border-primary/60 transition-colors">
-                <svg
-                  className="h-5 w-5 text-primary transition-transform duration-300 group-hover:rotate-12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                  <path d="M2 12h20" />
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-lg font-bold tracking-tight text-foreground flex items-center gap-1">
-                  one<span className="text-primary">atlas</span>
-                  <span className="rounded bg-secondary/80 px-1 py-0.2 font-mono text-[10px] text-muted-foreground border border-border/50">
-                    .dev
-                  </span>
-                </span>
-                <span className="text-[10px] text-muted-foreground -mt-1 hidden sm:inline">AI Model Index</span>
-              </div>
+            <Link to="/" className="group flex items-center transition hover:opacity-95">
+              <img
+                src="/logo.png"
+                alt="one atlas — AI Model Index"
+                className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -93,7 +74,7 @@ export function Shell({ children }: { children: ReactNode }) {
             </Link>
 
             <a
-              href="https://github.com"
+              href="https://github.com/aseershaikh07/one-atlas"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub Repository"
@@ -134,10 +115,8 @@ export function Shell({ children }: { children: ReactNode }) {
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-3">
-              <div className="flex items-center gap-2">
-                <div className="h-6 w-6 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-primary font-bold text-xs">
-                  Ω
-                </div>
+              <div className="flex items-center gap-2.5">
+                <img src="/logo-icon.png" alt="OneAtlas Logo" className="h-6 w-6 object-contain" />
                 <span className="font-display font-bold text-foreground">OneAtlas Intelligence</span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
