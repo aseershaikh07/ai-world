@@ -175,17 +175,19 @@ export function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 font-sans text-xs sm:text-[13px] font-medium transition-all duration-150 cursor-pointer ${
+      className={`inline-flex items-center gap-2 rounded-xl border px-3.5 py-1.5 font-sans text-xs sm:text-[13.5px] transition-all duration-150 cursor-pointer ${
         active
-          ? "border-primary bg-primary text-primary-foreground font-semibold shadow-sm"
-          : "border-border/80 bg-card/60 text-muted-foreground hover:border-primary/50 hover:text-foreground hover:bg-secondary/50"
+          ? "border-primary bg-primary text-primary-foreground font-bold shadow-md shadow-primary/25 scale-[1.02]"
+          : "border-border/90 bg-secondary/80 text-foreground/90 font-medium hover:border-primary/60 hover:bg-secondary hover:text-foreground hover:shadow-xs"
       }`}
     >
       <span>{children}</span>
       {typeof count === "number" && (
         <span
-          className={`rounded-full px-2 py-0.5 font-mono text-xs font-semibold ${
-            active ? "bg-primary-foreground/20 text-primary-foreground" : "bg-secondary text-muted-foreground"
+          className={`rounded-md px-2 py-0.5 font-mono text-xs font-bold transition-colors ${
+            active
+              ? "bg-primary-foreground/25 text-primary-foreground"
+              : "bg-background/90 text-foreground/80 border border-border/80"
           }`}
         >
           {count}
@@ -203,15 +205,15 @@ export function Tag({
   variant?: "default" | "success" | "accent" | "outline";
 }) {
   const variantStyles = {
-    default: "border-border/80 bg-secondary/70 text-secondary-foreground",
-    success: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400 font-medium",
-    accent: "border-primary/30 bg-primary/10 text-primary font-semibold",
-    outline: "border-border bg-card/40 text-muted-foreground",
+    default: "border-border/90 bg-secondary/90 text-foreground font-medium",
+    success: "border-emerald-500/40 bg-emerald-500/15 text-emerald-300 font-bold",
+    accent: "border-primary/40 bg-primary/15 text-primary font-bold",
+    outline: "border-border/90 bg-secondary/70 text-foreground/90 font-medium hover:border-primary/50",
   };
 
   return (
     <span
-      className={`inline-flex items-center rounded-md border px-2.5 py-1 font-sans text-xs sm:text-[12.5px] font-medium tracking-normal ${variantStyles[variant]}`}
+      className={`inline-flex items-center rounded-lg border px-2.5 py-1 font-sans text-xs sm:text-[13px] tracking-normal ${variantStyles[variant]}`}
     >
       {children}
     </span>

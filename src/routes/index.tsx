@@ -213,16 +213,23 @@ function ModelCatalogIndex() {
       {/* Main Grid View */}
       <div className="grid gap-8 lg:grid-cols-[260px_1fr]">
         {/* Sidebar Filters */}
-        <aside className="space-y-6">
-          <div className="flex items-center justify-between border-b border-border/70 pb-3">
-            <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-foreground">
-              Filter Catalog
-            </h3>
+        <aside className="rounded-2xl border border-border bg-card/85 p-5 shadow-sm space-y-6">
+          <div className="flex items-center justify-between border-b border-border pb-3.5">
+            <div className="flex items-center gap-2">
+              <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
+                </svg>
+              </span>
+              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-foreground">
+                Filter Catalog
+              </h3>
+            </div>
             {hasActiveFilters && (
               <button
                 type="button"
                 onClick={resetFilters}
-                className="font-sans text-xs sm:text-sm font-semibold text-primary hover:underline cursor-pointer"
+                className="rounded-lg bg-primary/10 px-2.5 py-1 font-sans text-xs font-bold text-primary hover:bg-primary/20 transition cursor-pointer"
               >
                 Reset all
               </button>
@@ -368,7 +375,8 @@ function ModelCatalogIndex() {
 function FilterGroup({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="space-y-2.5">
-      <h4 className="font-sans text-xs sm:text-[13px] font-bold uppercase tracking-wider text-muted-foreground">
+      <h4 className="font-sans text-xs sm:text-[13px] font-bold uppercase tracking-wider text-foreground/90 flex items-center gap-2">
+        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
         {title}
       </h4>
       <div className="flex flex-wrap gap-2">{children}</div>
