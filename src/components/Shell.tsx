@@ -30,13 +30,13 @@ export function Shell({ children }: { children: ReactNode }) {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-1.5">
               {NAVIGATION.map((item) => (
                 <Link
                   key={item.to}
                   to={item.to}
                   activeOptions={{ exact: item.to === "/" }}
-                  className="relative rounded-md px-3 py-1.5 font-sans text-sm font-medium text-muted-foreground transition hover:text-foreground hover:bg-secondary/40"
+                  className="relative rounded-lg px-3.5 py-2 font-sans text-sm sm:text-[15px] font-medium text-muted-foreground transition hover:text-foreground hover:bg-secondary/50"
                   activeProps={{
                     className: "bg-secondary text-foreground font-semibold shadow-sm border border-border/60",
                   }}
@@ -50,7 +50,7 @@ export function Shell({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-3">
             <Link
               to="/compare"
-              className="hidden sm:inline-flex items-center gap-1.5 rounded-lg border border-primary/30 bg-primary/10 px-3 py-1.5 font-mono text-xs font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"
+              className="hidden sm:inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 font-sans text-xs sm:text-sm font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"
             >
               <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M16 3h5v5" />
@@ -175,7 +175,7 @@ export function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 font-mono text-xs transition-all duration-150 cursor-pointer ${
+      className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 font-sans text-xs sm:text-[13px] font-medium transition-all duration-150 cursor-pointer ${
         active
           ? "border-primary bg-primary text-primary-foreground font-semibold shadow-sm"
           : "border-border/80 bg-card/60 text-muted-foreground hover:border-primary/50 hover:text-foreground hover:bg-secondary/50"
@@ -184,7 +184,7 @@ export function Chip({
       <span>{children}</span>
       {typeof count === "number" && (
         <span
-          className={`rounded-full px-1.5 py-0.2 text-[10px] ${
+          className={`rounded-full px-2 py-0.5 font-mono text-xs font-semibold ${
             active ? "bg-primary-foreground/20 text-primary-foreground" : "bg-secondary text-muted-foreground"
           }`}
         >
@@ -204,14 +204,14 @@ export function Tag({
 }) {
   const variantStyles = {
     default: "border-border/80 bg-secondary/70 text-secondary-foreground",
-    success: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400",
-    accent: "border-primary/30 bg-primary/10 text-primary font-medium",
-    outline: "border-border bg-transparent text-muted-foreground",
+    success: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400 font-medium",
+    accent: "border-primary/30 bg-primary/10 text-primary font-semibold",
+    outline: "border-border bg-card/40 text-muted-foreground",
   };
 
   return (
     <span
-      className={`inline-flex items-center rounded border px-2 py-0.5 font-mono text-[11px] tracking-tight ${variantStyles[variant]}`}
+      className={`inline-flex items-center rounded-md border px-2.5 py-1 font-sans text-xs sm:text-[12.5px] font-medium tracking-normal ${variantStyles[variant]}`}
     >
       {children}
     </span>
