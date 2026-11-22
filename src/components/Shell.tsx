@@ -17,17 +17,6 @@ const NAVIGATION: readonly NavItem[] = [
 export function Shell({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
-      {/* Top Banner / Ticker */}
-      <div className="border-b border-border/40 bg-secondary/30 px-4 py-1 text-center font-mono text-[11px] text-muted-foreground">
-        <span className="inline-flex items-center gap-1.5">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-          </span>
-          <strong className="text-foreground font-medium">Live Index:</strong> Tracking 18 frontier models across 8 major research labs
-        </span>
-      </div>
-
       {/* Main Header */}
       <header className="sticky top-0 z-30 border-b border-border/80 bg-background/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
