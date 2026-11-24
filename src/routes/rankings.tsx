@@ -10,12 +10,14 @@ export const Route = createFileRoute("/rankings")({
       { title: "AI Model Evaluation Leaderboards — AI-World" },
       {
         name: "description",
-        content: "Empirical rankings and leaderboards for frontier and open-source AI models across LMSYS Chatbot Arena Elo, MMLU, HumanEval, and GPQA.",
+        content:
+          "Empirical rankings and leaderboards for frontier and open-source AI models across LMSYS Chatbot Arena Elo, MMLU, HumanEval, and GPQA.",
       },
       { property: "og:title", content: "AI Model Evaluation Leaderboards — AI-World" },
       {
         property: "og:description",
-        content: "Empirical rankings and leaderboards for frontier and open-source AI models across LMSYS Chatbot Arena Elo, MMLU, HumanEval, and GPQA.",
+        content:
+          "Empirical rankings and leaderboards for frontier and open-source AI models across LMSYS Chatbot Arena Elo, MMLU, HumanEval, and GPQA.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -39,7 +41,8 @@ const BENCHMARKS: readonly BenchmarkSpec[] = [
     id: "arena",
     name: "Chatbot Arena Elo",
     category: "Human Preference",
-    description: "Crowdsourced blind A/B evaluation by LMSYS where human users judge competing model outputs.",
+    description:
+      "Crowdsourced blind A/B evaluation by LMSYS where human users judge competing model outputs.",
     minScale: 1200,
     unit: "Elo",
   },
@@ -47,7 +50,8 @@ const BENCHMARKS: readonly BenchmarkSpec[] = [
     id: "mmlu",
     name: "MMLU (Massive Multitask)",
     category: "General Knowledge",
-    description: "57 subjects across elementary math, US history, computer science, and law (5-shot evaluation).",
+    description:
+      "57 subjects across elementary math, US history, computer science, and law (5-shot evaluation).",
     minScale: 50,
     unit: "%",
   },
@@ -55,7 +59,8 @@ const BENCHMARKS: readonly BenchmarkSpec[] = [
     id: "humaneval",
     name: "HumanEval",
     category: "Python Coding",
-    description: "Zero-shot Python coding benchmark testing algorithmic comprehension and functional problem solving.",
+    description:
+      "Zero-shot Python coding benchmark testing algorithmic comprehension and functional problem solving.",
     minScale: 50,
     unit: "%",
   },
@@ -63,7 +68,8 @@ const BENCHMARKS: readonly BenchmarkSpec[] = [
     id: "gpqa",
     name: "GPQA Diamond",
     category: "Graduate Reasoning",
-    description: "Challenging Google-proof multiple-choice questions written by domain experts with PhDs.",
+    description:
+      "Challenging Google-proof multiple-choice questions written by domain experts with PhDs.",
     minScale: 30,
     unit: "%",
   },
@@ -79,7 +85,7 @@ function BenchmarkRankingsView() {
 
   const activeBenchmarkSpec = useMemo(
     () => BENCHMARKS.find((b) => b.id === selectedBenchmark)!,
-    [selectedBenchmark]
+    [selectedBenchmark],
   );
 
   const getLabName = (labId: string) => labs.find((l) => l.id === labId)?.name ?? labId;
@@ -97,7 +103,7 @@ function BenchmarkRankingsView() {
 
   const maxScore = useMemo(
     () => Math.max(...rankedModels.map((m) => m.benchmarks[selectedBenchmark]), 1),
-    [rankedModels, selectedBenchmark]
+    [rankedModels, selectedBenchmark],
   );
 
   return (
@@ -105,7 +111,9 @@ function BenchmarkRankingsView() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-2">
-          <span className="font-mono text-xs uppercase tracking-widest text-primary">Empirical Evals</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-primary">
+            Empirical Evals
+          </span>
           <span className="text-muted-foreground">•</span>
           <span className="font-mono text-xs text-muted-foreground">Standardized Benchmarks</span>
         </div>
@@ -113,7 +121,8 @@ function BenchmarkRankingsView() {
           AI Model Leaderboards
         </h1>
         <p className="mt-2 text-sm text-muted-foreground max-w-2xl">
-          Comprehensive benchmark results across coding, general knowledge, reasoning, and human preference metrics.
+          Comprehensive benchmark results across coding, general knowledge, reasoning, and human
+          preference metrics.
         </p>
       </div>
 
@@ -186,10 +195,10 @@ function BenchmarkRankingsView() {
                 isTopOne
                   ? "border-primary/60 bg-gradient-to-r from-primary/10 via-card to-card"
                   : isTopTwo
-                  ? "border-sky-500/40 bg-card"
-                  : isTopThree
-                  ? "border-amber-500/40 bg-card"
-                  : "border-border/70 bg-card hover:border-border"
+                    ? "border-sky-500/40 bg-card"
+                    : isTopThree
+                      ? "border-amber-500/40 bg-card"
+                      : "border-border/70 bg-card hover:border-border"
               }`}
             >
               {/* Rank Column */}
@@ -199,10 +208,10 @@ function BenchmarkRankingsView() {
                     isTopOne
                       ? "text-primary text-lg"
                       : isTopTwo
-                      ? "text-sky-400"
-                      : isTopThree
-                      ? "text-amber-400"
-                      : "text-muted-foreground"
+                        ? "text-sky-400"
+                        : isTopThree
+                          ? "text-amber-400"
+                          : "text-muted-foreground"
                   }`}
                 >
                   #{rank}

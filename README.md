@@ -54,14 +54,14 @@ The application will be running at `http://localhost:3000`.
 
 ## Available Scripts
 
-| Script | Command | Purpose |
-| :--- | :--- | :--- |
-| `dev` | `npm run dev` | Starts Vite dev server with hot module replacement |
-| `build` | `npm run build` | Compiles client and Nitro server production bundles |
-| `preview` | `npm run preview` | Previews the production build locally |
-| `test` | `npm run test` | Runs the Vitest test suite |
-| `lint` | `npm run lint` | Runs ESLint checks |
-| `format` | `npm run format` | Formats code with Prettier |
+| Script    | Command           | Purpose                                             |
+| :-------- | :---------------- | :-------------------------------------------------- |
+| `dev`     | `npm run dev`     | Starts Vite dev server with hot module replacement  |
+| `build`   | `npm run build`   | Compiles client and Nitro server production bundles |
+| `preview` | `npm run preview` | Previews the production build locally               |
+| `test`    | `npm run test`    | Runs the Vitest test suite                          |
+| `lint`    | `npm run lint`    | Runs ESLint checks                                  |
+| `format`  | `npm run format`  | Formats code with Prettier                          |
 
 ---
 

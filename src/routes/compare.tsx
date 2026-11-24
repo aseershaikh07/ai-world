@@ -11,19 +11,21 @@ interface CompareSearchParams {
 
 export const Route = createFileRoute("/compare")({
   validateSearch: (search: Record<string, unknown>): CompareSearchParams => {
-    return typeof search.ids === "string" ? { ids: search.ids } : {};
+    return typeof search["ids"] === "string" ? { ids: search["ids"] } : {};
   },
   head: () => ({
     meta: [
       { title: "Side-by-Side Model Comparison — AI-World" },
       {
         name: "description",
-        content: "Direct architectural and economic comparison of AI models across token pricing, context size, modalities, and public evaluation benchmarks.",
+        content:
+          "Direct architectural and economic comparison of AI models across token pricing, context size, modalities, and public evaluation benchmarks.",
       },
       { property: "og:title", content: "Side-by-Side Model Comparison — AI-World" },
       {
         property: "og:description",
-        content: "Direct architectural and economic comparison of AI models across token pricing, context size, modalities, and public evaluation benchmarks.",
+        content:
+          "Direct architectural and economic comparison of AI models across token pricing, context size, modalities, and public evaluation benchmarks.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -64,7 +66,10 @@ function ModelComparisonView() {
 
   const selectedModelIds = useMemo(() => {
     const raw = ids ?? "claude-sonnet-4-5,gpt-5,gemini-2-5-pro";
-    return raw.split(",").map((s) => s.trim()).filter(Boolean);
+    return raw
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
   }, [ids]);
 
   const selectedModels = useMemo(() => {
@@ -104,7 +109,9 @@ function ModelComparisonView() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-2">
-          <span className="font-mono text-xs uppercase tracking-widest text-primary">Matrix Evaluator</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-primary">
+            Matrix Evaluator
+          </span>
           <span className="text-muted-foreground">•</span>
           <span className="font-mono text-xs text-muted-foreground">Up to 4 models</span>
         </div>
@@ -112,7 +119,8 @@ function ModelComparisonView() {
           Side-by-Side Model Comparison
         </h1>
         <p className="mt-2 text-sm text-muted-foreground max-w-2xl">
-          Evaluate parameters, token costs per million tokens, context architectures, and public benchmark scores.
+          Evaluate parameters, token costs per million tokens, context architectures, and public
+          benchmark scores.
         </p>
       </div>
 
@@ -219,12 +227,16 @@ function ModelComparisonView() {
                 const bestInput = getBestMetricValue((m) => m.inputPrice, true);
                 return (
                   <tr className="bg-secondary/10">
-                    <td className="p-4 text-muted-foreground font-sans font-medium">Input / 1M Tokens</td>
+                    <td className="p-4 text-muted-foreground font-sans font-medium">
+                      Input / 1M Tokens
+                    </td>
                     {selectedModels.map((model) => {
                       const isBest = model.inputPrice === bestInput && selectedModels.length > 1;
                       return (
                         <td key={model.id} className="p-4">
-                          <span className={`font-semibold ${isBest ? "text-primary" : "text-foreground"}`}>
+                          <span
+                            className={`font-semibold ${isBest ? "text-primary" : "text-foreground"}`}
+                          >
                             {fmtPrice(model.inputPrice)}
                           </span>
                           {isBest && (
@@ -244,12 +256,16 @@ function ModelComparisonView() {
                 const bestOutput = getBestMetricValue((m) => m.outputPrice, true);
                 return (
                   <tr>
-                    <td className="p-4 text-muted-foreground font-sans font-medium">Output / 1M Tokens</td>
+                    <td className="p-4 text-muted-foreground font-sans font-medium">
+                      Output / 1M Tokens
+                    </td>
                     {selectedModels.map((model) => {
                       const isBest = model.outputPrice === bestOutput && selectedModels.length > 1;
                       return (
                         <td key={model.id} className="p-4">
-                          <span className={`font-semibold ${isBest ? "text-primary" : "text-foreground"}`}>
+                          <span
+                            className={`font-semibold ${isBest ? "text-primary" : "text-foreground"}`}
+                          >
                             {fmtPrice(model.outputPrice)}
                           </span>
                           {isBest && (
@@ -269,12 +285,16 @@ function ModelComparisonView() {
                 const maxContext = getBestMetricValue((m) => m.context, false);
                 return (
                   <tr className="bg-secondary/10">
-                    <td className="p-4 text-muted-foreground font-sans font-medium">Context Window</td>
+                    <td className="p-4 text-muted-foreground font-sans font-medium">
+                      Context Window
+                    </td>
                     {selectedModels.map((model) => {
                       const isMax = model.context === maxContext && selectedModels.length > 1;
                       return (
                         <td key={model.id} className="p-4">
-                          <span className={`font-semibold ${isMax ? "text-sky-400" : "text-foreground"}`}>
+                          <span
+                            className={`font-semibold ${isMax ? "text-sky-400" : "text-foreground"}`}
+                          >
                             {fmtCtx(model.context)}
                           </span>
                           {isMax && (
@@ -291,7 +311,10 @@ function ModelComparisonView() {
 
               {/* Section Header: Benchmarks */}
               <tr className="bg-secondary/40">
-                <td colSpan={selectedModels.length + 1} className="px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-primary">
+                <td
+                  colSpan={selectedModels.length + 1}
+                  className="px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-primary"
+                >
                   Evaluations & Benchmarks
                 </td>
               </tr>
@@ -308,7 +331,9 @@ function ModelComparisonView() {
                       return (
                         <td key={model.id} className="p-4">
                           {score > 0 ? (
-                            <span className={`font-bold ${isBest ? "text-primary" : "text-foreground"}`}>
+                            <span
+                              className={`font-bold ${isBest ? "text-primary" : "text-foreground"}`}
+                            >
                               {score}
                             </span>
                           ) : (
@@ -326,7 +351,9 @@ function ModelComparisonView() {
                 const bestMmlu = getBestMetricValue((m) => m.benchmarks.mmlu, false);
                 return (
                   <tr>
-                    <td className="p-4 text-muted-foreground font-sans">MMLU (General Knowledge)</td>
+                    <td className="p-4 text-muted-foreground font-sans">
+                      MMLU (General Knowledge)
+                    </td>
                     {selectedModels.map((model) => {
                       const score = model.benchmarks.mmlu;
                       const isBest = score === bestMmlu && selectedModels.length > 1 && score > 0;
@@ -398,7 +425,10 @@ function ModelComparisonView() {
 
               {/* Section Header: Capabilities */}
               <tr className="bg-secondary/40">
-                <td colSpan={selectedModels.length + 1} className="px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-primary">
+                <td
+                  colSpan={selectedModels.length + 1}
+                  className="px-4 py-2 font-mono text-[11px] font-bold uppercase tracking-wider text-primary"
+                >
                   Architectural Capabilities
                 </td>
               </tr>
@@ -437,7 +467,9 @@ function ModelComparisonView() {
         </div>
       ) : (
         <div className="rounded-xl border border-dashed border-border p-12 text-center">
-          <p className="text-muted-foreground">Select at least one model to build the comparison matrix.</p>
+          <p className="text-muted-foreground">
+            Select at least one model to build the comparison matrix.
+          </p>
         </div>
       )}
     </div>

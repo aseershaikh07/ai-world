@@ -45,7 +45,8 @@ export const labs: Lab[] = [
     name: "OpenAI",
     country: "USA",
     founded: 2015,
-    description: "Creators of the GPT series, ChatGPT, and pioneering reinforcement learning models.",
+    description:
+      "Creators of the GPT series, ChatGPT, and pioneering reinforcement learning models.",
   },
   {
     id: "anthropic",
@@ -66,35 +67,40 @@ export const labs: Lab[] = [
     name: "Meta AI",
     country: "USA",
     founded: 2013,
-    description: "Champion of open-weights foundational research and the ubiquitous Llama ecosystem.",
+    description:
+      "Champion of open-weights foundational research and the ubiquitous Llama ecosystem.",
   },
   {
     id: "mistral",
     name: "Mistral AI",
     country: "France",
     founded: 2023,
-    description: "European frontier lab shipping high-efficiency open and specialized commercial weights.",
+    description:
+      "European frontier lab shipping high-efficiency open and specialized commercial weights.",
   },
   {
     id: "deepseek",
     name: "DeepSeek",
     country: "China",
     founded: 2023,
-    description: "Breakthrough open reasoning models with ultra-efficient mixture-of-experts architectures.",
+    description:
+      "Breakthrough open reasoning models with ultra-efficient mixture-of-experts architectures.",
   },
   {
     id: "xai",
     name: "xAI",
     country: "USA",
     founded: 2023,
-    description: "Frontier research organization developing the Grok reasoning and multimodal systems.",
+    description:
+      "Frontier research organization developing the Grok reasoning and multimodal systems.",
   },
   {
     id: "qwen",
     name: "Alibaba Qwen",
     country: "China",
     founded: 2023,
-    description: "High-capability multilingual and reasoning open-weights models across diverse scales.",
+    description:
+      "High-capability multilingual and reasoning open-weights models across diverse scales.",
   },
 ];
 
@@ -123,7 +129,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "vision", "code", "json", "streaming"],
     providers: ["openai", "azure"],
     benchmarks: { mmlu: 91.2, humaneval: 93.4, gpqa: 85.7, arena: 1440 },
-    description: "OpenAI's flagship unified reasoning model with deep multi-step thinking and tool execution.",
+    description:
+      "OpenAI's flagship unified reasoning model with deep multi-step thinking and tool execution.",
     openWeights: false,
   },
   {
@@ -139,7 +146,8 @@ export const models: Model[] = [
     capabilities: ["tools", "vision", "json", "streaming"],
     providers: ["openai", "azure"],
     benchmarks: { mmlu: 82.0, humaneval: 87.2, gpqa: 40.2, arena: 1272 },
-    description: "Compact, fast, and cost-effective multimodal model tailored for high-volume enterprise tasks.",
+    description:
+      "Compact, fast, and cost-effective multimodal model tailored for high-volume enterprise tasks.",
     openWeights: false,
   },
   {
@@ -155,7 +163,8 @@ export const models: Model[] = [
     capabilities: [],
     providers: ["openai", "azure"],
     benchmarks: { mmlu: 0, humaneval: 0, gpqa: 0, arena: 0 },
-    description: "High-dimension vector representations optimized for semantic search and dense retrieval RAG.",
+    description:
+      "High-dimension vector representations optimized for semantic search and dense retrieval RAG.",
     openWeights: false,
   },
   {
@@ -171,7 +180,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "vision", "code", "json", "streaming"],
     providers: ["anthropic", "bedrock", "vertex"],
     benchmarks: { mmlu: 90.5, humaneval: 94.1, gpqa: 80.9, arena: 1430 },
-    description: "Anthropic's premier heavy intelligence engine built for complex research, orchestration, and software engineering.",
+    description:
+      "Anthropic's premier heavy intelligence engine built for complex research, orchestration, and software engineering.",
     openWeights: false,
   },
   {
@@ -187,7 +197,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "vision", "code", "json", "streaming"],
     providers: ["anthropic", "bedrock", "vertex"],
     benchmarks: { mmlu: 89.1, humaneval: 95.0, gpqa: 83.4, arena: 1438 },
-    description: "Industry-leading coding performance and balanced throughput for agentic workflows.",
+    description:
+      "Industry-leading coding performance and balanced throughput for agentic workflows.",
     openWeights: false,
   },
   {
@@ -203,7 +214,8 @@ export const models: Model[] = [
     capabilities: ["tools", "vision", "code", "streaming"],
     providers: ["anthropic", "bedrock"],
     benchmarks: { mmlu: 84.0, humaneval: 89.0, gpqa: 62.0, arena: 1360 },
-    description: "Near-instantaneous time-to-first-token model for customer support and real-time streaming.",
+    description:
+      "Near-instantaneous time-to-first-token model for customer support and real-time streaming.",
     openWeights: false,
   },
   {
@@ -219,7 +231,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "vision", "code", "json", "streaming"],
     providers: ["vertex"],
     benchmarks: { mmlu: 89.8, humaneval: 90.1, gpqa: 86.4, arena: 1455 },
-    description: "Native million-token multimodal engine capable of processing massive codebases, audio feeds, and hours of video.",
+    description:
+      "Native million-token multimodal engine capable of processing massive codebases, audio feeds, and hours of video.",
     openWeights: false,
   },
   {
@@ -235,7 +248,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "vision", "json", "streaming"],
     providers: ["vertex"],
     benchmarks: { mmlu: 84.5, humaneval: 85.0, gpqa: 78.3, arena: 1405 },
-    description: "Hybrid reasoning speedster supporting 1M tokens of multimodal context at low latency.",
+    description:
+      "Hybrid reasoning speedster supporting 1M tokens of multimodal context at low latency.",
     openWeights: false,
   },
   {
@@ -251,7 +265,8 @@ export const models: Model[] = [
     capabilities: [],
     providers: ["vertex"],
     benchmarks: { mmlu: 0, humaneval: 0, gpqa: 0, arena: 0 },
-    description: "Photorealistic text-to-image synthesis with accurate typography rendering and fine prompt alignment.",
+    description:
+      "Photorealistic text-to-image synthesis with accurate typography rendering and fine prompt alignment.",
     openWeights: false,
   },
   {
@@ -267,7 +282,8 @@ export const models: Model[] = [
     capabilities: ["tools", "vision", "code", "json", "streaming"],
     providers: ["together", "groq", "fireworks", "bedrock"],
     benchmarks: { mmlu: 85.5, humaneval: 82.4, gpqa: 69.8, arena: 1330 },
-    description: "Open-weights mixture-of-experts model supporting 1M tokens context and vision reasoning.",
+    description:
+      "Open-weights mixture-of-experts model supporting 1M tokens context and vision reasoning.",
     openWeights: true,
   },
   {
@@ -283,7 +299,8 @@ export const models: Model[] = [
     capabilities: ["tools", "code", "json", "streaming"],
     providers: ["together", "groq", "fireworks", "bedrock", "azure"],
     benchmarks: { mmlu: 86.0, humaneval: 88.4, gpqa: 50.5, arena: 1290 },
-    description: "The gold-standard open 70B instruction model matching early GPT-4 tier intelligence.",
+    description:
+      "The gold-standard open 70B instruction model matching early GPT-4 tier intelligence.",
     openWeights: true,
   },
   {
@@ -299,7 +316,8 @@ export const models: Model[] = [
     capabilities: ["tools", "code", "json", "streaming"],
     providers: ["azure", "bedrock", "vertex"],
     benchmarks: { mmlu: 84.0, humaneval: 92.0, gpqa: 48.6, arena: 1300 },
-    description: "Mistral's flagship multilingual model with extensive reasoning, math, and code capabilities.",
+    description:
+      "Mistral's flagship multilingual model with extensive reasoning, math, and code capabilities.",
     openWeights: true,
   },
   {
@@ -315,7 +333,8 @@ export const models: Model[] = [
     capabilities: ["code", "streaming"],
     providers: ["vertex", "azure"],
     benchmarks: { mmlu: 70.0, humaneval: 86.6, gpqa: 35.0, arena: 1240 },
-    description: "Specialized code generation engine featuring fill-in-the-middle support across 80+ programming languages.",
+    description:
+      "Specialized code generation engine featuring fill-in-the-middle support across 80+ programming languages.",
     openWeights: false,
   },
   {
@@ -331,7 +350,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "code", "streaming"],
     providers: ["together", "fireworks", "bedrock", "azure"],
     benchmarks: { mmlu: 90.8, humaneval: 90.2, gpqa: 71.5, arena: 1360 },
-    description: "Open-weights reasoning powerhouse trained with pure reinforcement learning for math and algorithms.",
+    description:
+      "Open-weights reasoning powerhouse trained with pure reinforcement learning for math and algorithms.",
     openWeights: true,
   },
   {
@@ -347,7 +367,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "code", "json", "streaming"],
     providers: ["together", "fireworks"],
     benchmarks: { mmlu: 88.5, humaneval: 89.0, gpqa: 74.9, arena: 1380 },
-    description: "Highly optimized mixture-of-experts general purpose model with multi-head latent attention.",
+    description:
+      "Highly optimized mixture-of-experts general purpose model with multi-head latent attention.",
     openWeights: true,
   },
   {
@@ -363,7 +384,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "vision", "code", "json", "streaming"],
     providers: ["azure"],
     benchmarks: { mmlu: 87.0, humaneval: 88.0, gpqa: 87.5, arena: 1420 },
-    description: "xAI's frontier multimodal system featuring rigorous mathematical verification and long context reasoning.",
+    description:
+      "xAI's frontier multimodal system featuring rigorous mathematical verification and long context reasoning.",
     openWeights: false,
   },
   {
@@ -379,7 +401,8 @@ export const models: Model[] = [
     capabilities: ["reasoning", "tools", "code", "json", "streaming"],
     providers: ["together", "fireworks"],
     benchmarks: { mmlu: 87.8, humaneval: 87.0, gpqa: 77.5, arena: 1395 },
-    description: "Massive open MoE model with native thinking mode and broad multilingual comprehension.",
+    description:
+      "Massive open MoE model with native thinking mode and broad multilingual comprehension.",
     openWeights: true,
   },
   {
@@ -395,7 +418,8 @@ export const models: Model[] = [
     capabilities: [],
     providers: ["openai", "groq", "together"],
     benchmarks: { mmlu: 0, humaneval: 0, gpqa: 0, arena: 0 },
-    description: "High-accuracy automatic speech recognition and translation across 99 languages (price billed per minute).",
+    description:
+      "High-accuracy automatic speech recognition and translation across 99 languages (price billed per minute).",
     openWeights: true,
   },
 ];

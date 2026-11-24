@@ -10,12 +10,14 @@ export const Route = createFileRoute("/labs")({
       { title: "AI Research Labs & Inference Providers — AI-World" },
       {
         name: "description",
-        content: "Explore the foundation research laboratories, creators, and cloud inference platforms hosting modern AI models.",
+        content:
+          "Explore the foundation research laboratories, creators, and cloud inference platforms hosting modern AI models.",
       },
       { property: "og:title", content: "AI Research Labs & Inference Providers — AI-World" },
       {
         property: "og:description",
-        content: "Explore the foundation research laboratories, creators, and cloud inference platforms hosting modern AI models.",
+        content:
+          "Explore the foundation research laboratories, creators, and cloud inference platforms hosting modern AI models.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -34,15 +36,20 @@ function LabsAndProvidersDirectory() {
       {/* Header */}
       <div>
         <div className="flex items-center gap-2">
-          <span className="font-mono text-xs uppercase tracking-widest text-primary">Ecosystem</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-primary">
+            Ecosystem
+          </span>
           <span className="text-muted-foreground">•</span>
-          <span className="font-mono text-xs text-muted-foreground">Foundations & Infrastructure</span>
+          <span className="font-mono text-xs text-muted-foreground">
+            Foundations & Infrastructure
+          </span>
         </div>
         <h1 className="mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl">
           Labs & Inference Providers
         </h1>
         <p className="mt-2 text-sm text-muted-foreground max-w-2xl">
-          Directory of research organizations producing frontier weights and the cloud API providers serving them to production.
+          Directory of research organizations producing frontier weights and the cloud API providers
+          serving them to production.
         </p>
       </div>
 

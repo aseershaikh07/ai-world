@@ -11,13 +11,11 @@ export interface CatalogData {
 /**
  * Server function fetching full model catalog
  */
-const fetchCatalog = createServerFn({ method: "GET" }).handler(
-  async (): Promise<CatalogData> => ({
-    models,
-    labs,
-    providers,
-  })
-);
+const fetchCatalog = createServerFn({ method: "GET" }).handler(async (): Promise<CatalogData> => ({
+  models,
+  labs,
+  providers,
+}));
 
 export const catalogQuery = queryOptions({
   queryKey: ["catalog"],

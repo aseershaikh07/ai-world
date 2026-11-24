@@ -18,7 +18,9 @@ function NotFoundComponent() {
     <div className="flex min-h-[70vh] flex-col items-center justify-center px-4 text-center">
       <div className="rounded-2xl border border-border/80 bg-card/60 p-8 shadow-2xl backdrop-blur-md max-w-md w-full">
         <span className="font-mono text-xs uppercase tracking-widest text-primary">Error 404</span>
-        <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground">Page Not Found</h1>
+        <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground">
+          Page Not Found
+        </h1>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
           The requested route does not exist in the AI-World model index or has been relocated.
         </p>
@@ -49,7 +51,9 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
       <div className="rounded-2xl border border-destructive/30 bg-card/80 p-8 shadow-2xl backdrop-blur-md max-w-lg w-full text-left">
         <div className="flex items-center gap-2 text-destructive">
           <div className="h-2 w-2 rounded-full bg-destructive animate-pulse" />
-          <span className="font-mono text-xs font-semibold uppercase tracking-wider">Application Runtime Error</span>
+          <span className="font-mono text-xs font-semibold uppercase tracking-wider">
+            Application Runtime Error
+          </span>
         </div>
         <h2 className="mt-2 font-display text-xl font-bold text-foreground">
           An unexpected error occurred during rendering
@@ -88,12 +92,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "AI-World — AI Model Discovery & Intelligence" },
       {
         name: "description",
-        content: "Discover, compare and benchmark frontier and open-weights AI models across leading research labs and inference providers.",
+        content:
+          "Discover, compare and benchmark frontier and open-weights AI models across leading research labs and inference providers.",
       },
       { property: "og:title", content: "AI-World — AI Model Discovery & Intelligence" },
       {
         property: "og:description",
-        content: "Discover, compare and benchmark frontier and open-weights AI models across leading research labs and inference providers.",
+        content:
+          "Discover, compare and benchmark frontier and open-weights AI models across leading research labs and inference providers.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
