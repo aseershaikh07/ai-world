@@ -20,7 +20,7 @@ function NotFoundComponent() {
         <span className="font-mono text-xs uppercase tracking-widest text-primary">Error 404</span>
         <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-foreground">Page Not Found</h1>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-          The requested route does not exist in the OneAtlas model index or has been relocated.
+          The requested route does not exist in the AI-World model index or has been relocated.
         </p>
         <div className="mt-6 flex justify-center gap-3">
           <Link
@@ -85,19 +85,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "OneAtlas — AI Model Discovery & Intelligence" },
+      { title: "AI-World — AI Model Discovery & Intelligence" },
       {
         name: "description",
         content: "Discover, compare and benchmark frontier and open-weights AI models across leading research labs and inference providers.",
       },
-      { property: "og:title", content: "OneAtlas — AI Model Discovery & Intelligence" },
+      { property: "og:title", content: "AI-World — AI Model Discovery & Intelligence" },
       {
         property: "og:description",
         content: "Discover, compare and benchmark frontier and open-weights AI models across leading research labs and inference providers.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@oneatlas" },
+      { name: "twitter:site", content: "@aiworld" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

@@ -1,6 +1,6 @@
-# Engineering Guidelines — OneAtlas
+# Engineering Guidelines — AI-World
 
-Welcome to the OneAtlas codebase. This document outlines project conventions, architecture, and coding standards.
+Welcome to the AI-World codebase. This document outlines project conventions, architecture, and coding standards.
 
 ## Tech Stack
 - **Framework:** TanStack Start (SSR + Nitro)

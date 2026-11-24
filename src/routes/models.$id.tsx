@@ -12,7 +12,7 @@ export const Route = createFileRoute("/models/$id")({
     return { name: model.name, description: model.description };
   },
   head: ({ loaderData }) => {
-    const title = `${loaderData?.name ?? "Model Specifications"} — OneAtlas`;
+    const title = `${loaderData?.name ?? "Model Specifications"} — AI-World`;
     const desc = loaderData?.description ?? "Foundation model specifications, pricing, and benchmarks.";
     return {
       meta: [
@@ -60,7 +60,7 @@ function ModelSpecificationView() {
       {/* Navigation Breadcrumb */}
       <div className="flex items-center gap-2 font-mono text-xs text-muted-foreground">
         <Link to="/" className="hover:text-primary transition-colors">
-          OneAtlas
+          AI-World
         </Link>
         <span>/</span>
         <Link to="/" className="hover:text-primary transition-colors">

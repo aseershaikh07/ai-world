@@ -7,12 +7,12 @@ import { Chip, Tag } from "@/components/Shell";
 export const Route = createFileRoute("/rankings")({
   head: () => ({
     meta: [
-      { title: "AI Model Evaluation Leaderboards — OneAtlas" },
+      { title: "AI Model Evaluation Leaderboards — AI-World" },
       {
         name: "description",
         content: "Empirical rankings and leaderboards for frontier and open-source AI models across LMSYS Chatbot Arena Elo, MMLU, HumanEval, and GPQA.",
       },
-      { property: "og:title", content: "AI Model Evaluation Leaderboards — OneAtlas" },
+      { property: "og:title", content: "AI Model Evaluation Leaderboards — AI-World" },
       {
         property: "og:description",
         content: "Empirical rankings and leaderboards for frontier and open-source AI models across LMSYS Chatbot Arena Elo, MMLU, HumanEval, and GPQA.",

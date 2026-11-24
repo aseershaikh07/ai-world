@@ -8,12 +8,12 @@ import type { Capability, Model } from "@/lib/data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "OneAtlas — Frontier & Open AI Model Directory" },
+      { title: "AI-World — Frontier & Open AI Model Directory" },
       {
         name: "description",
         content: "Search, filter, and compare 18+ leading AI models by research lab, inference provider, capabilities, context length, and pricing.",
       },
-      { property: "og:title", content: "OneAtlas — Frontier & Open AI Model Directory" },
+      { property: "og:title", content: "AI-World — Frontier & Open AI Model Directory" },
       {
         property: "og:description",
         content: "Search, filter, and compare 18+ leading AI models by research lab, inference provider, capabilities, context length, and pricing.",
@@ -139,7 +139,7 @@ function ModelCatalogIndex() {
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-[11px] font-semibold text-primary">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Atlas Database
+            AI-World Database
           </span>
           <span className="font-mono text-xs text-muted-foreground">
             Updated Q1 2026

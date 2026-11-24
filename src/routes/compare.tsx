@@ -15,12 +15,12 @@ export const Route = createFileRoute("/compare")({
   },
   head: () => ({
     meta: [
-      { title: "Side-by-Side Model Comparison — OneAtlas" },
+      { title: "Side-by-Side Model Comparison — AI-World" },
       {
         name: "description",
         content: "Direct architectural and economic comparison of AI models across token pricing, context size, modalities, and public evaluation benchmarks.",
       },
-      { property: "og:title", content: "Side-by-Side Model Comparison — OneAtlas" },
+      { property: "og:title", content: "Side-by-Side Model Comparison — AI-World" },
       {
         property: "og:description",
         content: "Direct architectural and economic comparison of AI models across token pricing, context size, modalities, and public evaluation benchmarks.",

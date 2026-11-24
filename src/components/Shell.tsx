@@ -24,7 +24,7 @@ export function Shell({ children }: { children: ReactNode }) {
             <Link to="/" className="group flex items-center transition hover:opacity-95">
               <img
                 src="/logo.png"
-                alt="one atlas — AI Model Index"
+                alt="AI-World — AI Model Index"
                 className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </Link>
@@ -63,7 +63,7 @@ export function Shell({ children }: { children: ReactNode }) {
             </Link>
 
             <a
-              href="https://github.com/aseershaikh07/one-atlas"
+              href="https://github.com/aseershaikh07/ai-world"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub Repository"
@@ -105,8 +105,8 @@ export function Shell({ children }: { children: ReactNode }) {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div className="space-y-3">
               <div className="flex items-center gap-2.5">
-                <img src="/logo-icon.png" alt="OneAtlas Logo" className="h-6 w-6 object-contain" />
-                <span className="font-display font-bold text-foreground">OneAtlas Intelligence</span>
+                <img src="/logo-icon.png" alt="AI-World Logo" className="h-6 w-6 object-contain" />
+                <span className="font-display font-bold text-foreground">AI-World Intelligence</span>
               </div>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 Independent platform indexing frontier foundation models, pricing economics, context architectures, and public benchmark evaluations.
@@ -145,7 +145,7 @@ export function Shell({ children }: { children: ReactNode }) {
           </div>
 
           <div className="mt-8 border-t border-border/40 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted-foreground">
-            <p>© {new Date().getFullYear()} OneAtlas Project. All model trademarks belong to their respective labs.</p>
+            <p>© {new Date().getFullYear()} AI-World Project. All model trademarks belong to their respective labs.</p>
             <p className="flex items-center gap-2">
               <span>TypeScript</span>
               <span>•</span>

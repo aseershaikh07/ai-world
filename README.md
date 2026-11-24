@@ -1,8 +1,8 @@
-# OneAtlas (oneatlas.dev)
+# AI-World
 
 > Comprehensive AI model discovery, benchmark tracking, and provider intelligence platform.
 
-OneAtlas indexes frontier and open-weights artificial intelligence models across research labs (Anthropic, OpenAI, Google DeepMind, Meta, Mistral, DeepSeek, xAI, Qwen) and inference providers. It enables engineers to evaluate pricing, context windows, benchmark performance, and architectural capabilities side-by-side.
+AI-World indexes frontier and open-weights artificial intelligence models across research labs (Anthropic, OpenAI, Google DeepMind, Meta, Mistral, DeepSeek, xAI, Qwen) and inference providers. It enables engineers to evaluate pricing, context windows, benchmark performance, and architectural capabilities side-by-side.
 
 ---
 
@@ -38,8 +38,8 @@ OneAtlas indexes frontier and open-weights artificial intelligence models across
 
 ```bash
 # Clone the repository
-git clone https://github.com/oneatlas/oneatlas.git
-cd oneatlas
+git clone https://github.com/aseershaikh07/ai-world.git
+cd ai-world
 
 # Install dependencies
 npm install

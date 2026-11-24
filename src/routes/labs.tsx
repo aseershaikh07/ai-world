@@ -7,12 +7,12 @@ import { Chip, Tag } from "@/components/Shell";
 export const Route = createFileRoute("/labs")({
   head: () => ({
     meta: [
-      { title: "AI Research Labs & Inference Providers — OneAtlas" },
+      { title: "AI Research Labs & Inference Providers — AI-World" },
       {
         name: "description",
         content: "Explore the foundation research laboratories, creators, and cloud inference platforms hosting modern AI models.",
       },
-      { property: "og:title", content: "AI Research Labs & Inference Providers — OneAtlas" },
+      { property: "og:title", content: "AI Research Labs & Inference Providers — AI-World" },
       {
         property: "og:description",
         content: "Explore the foundation research laboratories, creators, and cloud inference platforms hosting modern AI models.",
